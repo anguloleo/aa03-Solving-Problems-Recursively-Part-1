@@ -12,7 +12,19 @@ range(7, 6); // []
 
 
 function range(start, end) {
-  // Your code here 
+  let arr = [];
+
+  if(end < start){
+    return arr;
+  }
+
+  if(start === end){
+    return arr;
+  }
+
+  arr.push(start);
+
+  return arr.concat(range(start + 1, end));
 }
 
 
